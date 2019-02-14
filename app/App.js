@@ -1,13 +1,38 @@
 import React, { Component } from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default class HelloWorldApp extends Component {
+
+export default class EmptyToDo extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#F5FCFF"}}>
-        <Text>Hello oo world!</Text>
-        <Button title="Button!" color="#F51C11" />
+      <View style= {styles.container}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+         <Text style={styles.buttonText} > + Add something </Text>
+        </TouchableOpacity>
       </View>
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffe9d1',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  button: {
+  	alignItems: 'center',
+    backgroundColor: '#636b77',
+    padding: 10,
+    shadowColor: '#6d6262',
+    shadowOffset: { height: 1, width: 1},
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+  },
+  buttonText: {
+  	color: '#f7fbff',
+  	fontSize: 25,
+  }
+});
