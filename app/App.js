@@ -1,9 +1,11 @@
+
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { createStore,combineReducers,applyMiddleware } from 'redux';
 import messageReducer from './reducer';
 import { addMessage } from './actions';
 import EmptyToDo from './screens/EmptyToDo';
+import ToDo from './screens/ToDo';
 
 const store = createStore(messageReducer);
 
@@ -21,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-const ConnectedComponent = connect(mapStateToProps,mapDispatchToProps)(EmptyToDo);
+const ConnectedComponent = connect(mapStateToProps,mapDispatchToProps)(ToDo);
 
 export default class AppWrapper extends Component{
   render(){
@@ -32,5 +34,3 @@ export default class AppWrapper extends Component{
     );
   }
 }
-
-

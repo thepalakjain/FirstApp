@@ -1,14 +1,14 @@
-import { styleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
+  empty: {
     flex: 1,
     backgroundColor: '#ffe9d1',
     alignItems: 'center',
     justifyContent: 'center'
   },
   button: {
-  	alignItems: 'center',
+    alignItems: 'center',
     backgroundColor: '#636b77',
     padding: 10,
     shadowColor: '#6d6262',
@@ -17,7 +17,17 @@ export const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   buttonText: {
-  	color: '#f7fbff',
-  	fontSize: 25,
+    color: '#f7fbff',
+    fontSize: 25,
+  },
+  list: {
+    flex: 1,
+    backgroundColor: '#ffe9d1',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start'
+  },
+  vSpacer: {
+    backgroundColor: '#ffe9d1',
+    height: 70
   }
 });
