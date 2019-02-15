@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  button: {
+  addButton: {
     alignItems: 'center',
     backgroundColor: '#636b77',
     padding: 10,
@@ -27,7 +27,24 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-start'
   },
   vSpacer: {
-    backgroundColor: '#ffe9d1',
-    height: 70
-  }
+    height: 70,
+  },
+  task: {
+    padding: 10,
+    fontSize: 25,
+  },
+  roundButton: {
+    alignItems: 'center',
+    backgroundColor: '#636b77',
+    padding: 10,
+    shadowColor: '#6d6262',
+    shadowOffset: { height: 1, width: 1},
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 });

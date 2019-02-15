@@ -1,9 +1,8 @@
-
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { createStore,combineReducers,applyMiddleware } from 'redux';
 import messageReducer from './reducer';
-import { addMessage } from './actions';
+import { addTask } from './actions';
 import EmptyToDo from './screens/EmptyToDo';
 import ToDo from './screens/ToDo';
 
@@ -11,14 +10,15 @@ const store = createStore(messageReducer);
 
 const mapStateToProps = (state) => {
   return {
-    messages: state
+    tasks: state.tasks,
+    adding: state.adding
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    submitNewMessage: (message) => {
-      dispatch(addMessage(message));
+    submitNewTask: (task) => {
+      dispatch(addTask(task));
     }
   }
 };

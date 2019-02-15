@@ -1,8 +1,8 @@
 import { ADD,REMOVE,EDIT,COMPLETE,UNCOMPLETE } from './constants';
 
-export function addMessage(message) {
+export function addTask(task) {
   return {
     type: ADD,
-    message: message
+    task: task
   }
 };

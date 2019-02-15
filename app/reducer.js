@@ -1,9 +1,17 @@
 import { ADD,REMOVE,EDIT,COMPLETE,UNCOMPLETE } from './constants';
 
-export default function messageReducer(state = [], action) {
+const defaultState = {
+	tasks: [],
+	adding: false
+}
+
+export default function messageReducer(state = defaultState, action) {
   switch (action.type) {
     case ADD:
-      return [ ...state, action.message ];
+    	return {
+      		tasks: [ ...state.tasks, action.task, "dummycheck" ],
+      		adding: false
+      	}
     default:
       return state;
   }
