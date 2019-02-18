@@ -9,7 +9,7 @@ export default function messageReducer(state = defaultState, action) {
   switch (action.type) {
     case ADD:
     	return {
-      		tasks: [ ...state.tasks, action.task, "dummycheck" ],
+      		tasks: [ ...state.tasks, action.task],
       		adding: false
       	}
     default:

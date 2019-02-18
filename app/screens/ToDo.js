@@ -16,6 +16,7 @@ export default class ToDo extends Component {
 	
 	submitTask(){
 		this.props.submitNewTask(this.state.text);
+		console.log("hello");
 		this.setState({ text:'' });
 	}
 
@@ -42,7 +43,7 @@ export default class ToDo extends Component {
     			padding = {20}
           		placeholder="Type your task here."
           		enablesReturnKeyAutomatically = {true}
-          		text = {this.state.text}
+          		value = {this.state.text}
           		onChangeText= {(txt) => this.setState({text:txt})}
           		onSubmitEditing={this.submitTask}
         		/>
