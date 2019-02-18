@@ -8,8 +8,10 @@ const defaultState = {
 export default function messageReducer(state = defaultState, action) {
   switch (action.type) {
     case ADD:
+      console.log("adding:/n");
+      console.log(action.task);
     	return {
-      		tasks: [ ...state.tasks, action.task, "dummycheck" ],
+      		tasks: [ ...state.tasks, action.task],
       		adding: false
       	}
     default:

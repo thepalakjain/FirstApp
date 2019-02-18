@@ -18,6 +18,7 @@ export default class ToDo extends Component {
 	submitTask(){
 		this.props.submitNewTask(this.state.text);
 		this.setState({ text:'' });
+    //console.log(this.state.text);
 	}
 	
 
@@ -54,7 +55,7 @@ export default class ToDo extends Component {
           		onChange= {this.handleChange}
           		onSubmitEditing={this.submitTask}
         		/>
-        		{this.props.tasks.map((task) => (<Text style={styles.task}>{task}</Text>))}
+        		{/*this.props.tasks.map((task) => (<Text key={task} style={styles.task}>{task}</Text>))*/}
     		</View>
     	);
   	}
