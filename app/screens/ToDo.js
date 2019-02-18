@@ -10,7 +10,6 @@ export default class ToDo extends Component {
 		this.state = {
 			text: ''
 		}
-		this.handleChange = this.handleChange.bind(this);
 		this.submitTask = this.submitTask.bind(this);
 	}
 
@@ -18,13 +17,6 @@ export default class ToDo extends Component {
 	submitTask(){
 		this.props.submitNewTask(this.state.text);
 		this.setState({ text:'' });
-	}
-	
-
-	handleChange(event){
-		this.setState({
-			text: event.target.value
-		});
 	}
 
 	render() {
@@ -51,7 +43,7 @@ export default class ToDo extends Component {
           		placeholder="Type your task here."
           		enablesReturnKeyAutomatically = {true}
           		text = {this.state.text}
-          		onChange= {this.handleChange}
+          		onChangeText= {(txt) => this.setState({text:txt})}
           		onSubmitEditing={this.submitTask}
         		/>
         		{this.props.tasks.map((task) => (<Text style={styles.task}>{task}</Text>))}
